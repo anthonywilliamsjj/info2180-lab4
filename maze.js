@@ -1,27 +1,24 @@
 //EXERCISE1
-window.onload;
+window.onload = function() {
+    $("boundary1").onmouseover = overBoundary1;
+	var boundaries = $$("div#maze div.boundary");
+    	for (var i = 0; i < boundaries.length; i++) {
+        	boundaries[i].onmouseover = overBoundary2;
+    	}
+};
 
-$("boundary1").onmouseover = overBoundary;
-
-function overBoundary() {
+function overBoundary1() {
     // $("boundary1").style.backgroundColor = "#ff8888";
     $("boundary1").addClassName("youlose");
 }
 
 			
 //EXERCISE2
-for (var count=0;count<document.getElementsByClassName("boundary").length-1; count++){
-	document.getElementsByClassName("boundary")[count].addEventListener("mouseover", function control(){
-		for (var num = 0; num < document.getElementsByClassName("boundary").length - 1; num++){
-			document.querySelectorAll("div.boundary")[num].classList.add("youlose");
-		}
-		let newElement = document.createElement("h2");
-		newElement.textContent = "You Lose!";
-		document.body.append(newElement);
-		var status = document.createAttribute("id");
-		status.value = "status";
-		newElement.setAttributeNode(status);	
-	})
+function overBoundary2() {
+    var boundaries = $$("div#maze div.boundary");
+    for (var i = 0; i < boundaries.length; i++) {
+        boundaries[i].style.backgroundColor = "#ff8888";
+    }
 }
 
 //EXERCISE3
