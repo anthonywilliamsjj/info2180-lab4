@@ -1,7 +1,7 @@
 //EXERCISE1
-window.onload = function() {
-    $("boundary1").onmouseover = overBoundary;
-};
+window.onload;
+
+$("boundary1").onmouseover = overBoundary;
 
 function overBoundary() {
     // $("boundary1").style.backgroundColor = "#ff8888";
