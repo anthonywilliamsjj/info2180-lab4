@@ -1,12 +1,12 @@
 //EXERCISE1
-window.onload;
+window.onload = function() {
+    $("boundary1").onmouseover = overBoundary;
+};
 
-let boundaryOver = document.getElementById("boundary1");
-
-boundaryOver.addEventListener("mouseover", function warning(){
-		boundaryOver.classList.add("youlose");
+function overBoundary() {
+    // $("boundary1").style.backgroundColor = "#ff8888";
+    $("boundary1").addClassName("youlose");
 }
-)
 
 			
 //EXERCISE2
